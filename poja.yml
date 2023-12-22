@@ -5,7 +5,7 @@ custom_java_env_vars: poja-custom-java-env-vars.txt
 custom_java_repositories: poja-custom-java-repositories.txt
 frontal_memory: 2048
 jacoco-min-coverage: '0.8'
-package_full_name: poja.big-sum.std220006
+package_full_name: poja.big-sum.std22006
 region: eu-west-3
 ses_source: noreply@nowhere.com
 ssm_sg_id: /poja-big-sum-std22006/sg/id

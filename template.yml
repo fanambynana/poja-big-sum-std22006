@@ -25,7 +25,7 @@ Globals:
         AWS_S3_BUCKET: !Sub '{{resolve:ssm:/poja-big-sum-std22006/${Env}/s3/bucket-name}}'
         AWS_SES_SOURCE: noreply@nowhere.com
         DRIVERCLASSNAME: org.sqlite.JDBC
-        SPRING_JPA_DATABASEPLATFORM: poja.big-sum.std220006.repository.conf.SqliteDialect
+        SPRING_JPA_DATABASEPLATFORM: poja.big-sum.std22006.repository.conf.SqliteDialect
         DATABASE_URL: jdbc:sqlite:/mnt/efs/sqlite-data:db?cache=shared
         DATABASE_USERNAME: sa
         DATABASE_PASSWORD: sa
@@ -41,7 +41,7 @@ Resources:
   FrontalFunction:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: poja.big-sum.std220006.ApiEventHandler::handleRequest
+      Handler: poja.big-sum.std22006.ApiEventHandler::handleRequest
       MemorySize: 2048
       Role: !Sub '{{resolve:ssm:/poja-big-sum-std22006/${Env}/execution/role-arn}}'
       FileSystemConfigs:
@@ -57,7 +57,7 @@ Resources:
   WorkerFunction:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: poja.big-sum.std220006.MailboxEventHandler::handleRequest
+      Handler: poja.big-sum.std22006.MailboxEventHandler::handleRequest
       MemorySize: 1024
       Role: !Sub '{{resolve:ssm:/poja-big-sum-std22006/${Env}/execution/role-arn}}'
       FileSystemConfigs:

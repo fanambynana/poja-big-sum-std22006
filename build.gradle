@@ -22,7 +22,7 @@ repositories {
 }
 
 java {
-    group = 'poja.big-sum.std220006'
+    group = 'poja.big-sum.std22006'
     sourceCompatibility = '17'
     targetCompatibility = '17'
 }
